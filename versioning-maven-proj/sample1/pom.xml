@@ -9,10 +9,6 @@
 	<artifactId>sample1</artifactId>
 	<name>sample1 </name>
 
-	<properties>
-		<sample1.version>1.0.0</sample1.version>
-	</properties>
-
 	<dependencies>
 
 		<dependency>
