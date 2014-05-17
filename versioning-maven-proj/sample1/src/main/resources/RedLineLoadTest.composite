@@ -1,0 +1,22 @@
+<composite xmlns="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+           xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.1"
+           targetNamespace="http://RedlineLoadTest"
+           xmlns:cntmngmnt="http://com.loadtest.service"          
+           name="RedlineLoadTest">
+     
+      <!-- Marketing component -->
+    
+    <component name="MarketingComponent"> 
+    <implementation.spring location="RedlineSpring-Context.xml"/>
+     <service name="MemberInfoService" >
+        <tuscany:binding.rest uri="/MemberInfoService">
+       	   <tuscany:wireFormat.json/>
+		    <tuscany:operationSelector.jaxrs/>
+       	 </tuscany:binding.rest >
+      </service >
+    </component>
+    
+    
+      
+     
+</composite>
